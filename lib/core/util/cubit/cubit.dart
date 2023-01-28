@@ -67,7 +67,7 @@ class AppBloc extends Cubit<AppState> {
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: ColorsManager.textPrimaryBlue,
         elevation: 50.0,
-        selectedItemColor: ColorsManager.primary,
+        selectedItemColor: const Color.fromARGB(255, 1, 196, 251),
         unselectedItemColor: Colors.grey[400],
         type: BottomNavigationBarType.fixed,
         selectedLabelStyle: const TextStyle(
@@ -76,9 +76,9 @@ class AppBloc extends Cubit<AppState> {
       ),
       //primarySwatch: MaterialColor(int.parse('0xff0075ff'), color),
       colorScheme: const ColorScheme(
-        primary: ColorsManager.primary,
-        onPrimary: ColorsManager.primary,
-        primaryContainer: ColorsManager.orangePrimary,
+        primary: Color.fromARGB(255, 1, 196, 251),
+        onPrimary: Color.fromARGB(255, 1, 196, 251),
+        primaryContainer: Color.fromARGB(255, 1, 196, 251),
         secondary: ColorsManager.textPrimaryBlue,
         onSecondary: ColorsManager.onSecondaryLight,
         secondaryContainer: ColorsManager.secondaryContainerLight,

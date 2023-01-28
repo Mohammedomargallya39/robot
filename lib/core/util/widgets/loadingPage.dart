@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:robot/core/util/resources/assets.gen.dart';
-
+import '../resources/assets.gen.dart';
 
 // if (snapshot.connectionState == ConnectionState.waiting) {
 // return const LoadingPage();

@@ -1,5 +1,5 @@
 // import 'package:flutter/material.dart';
-// import 'package:gymawy/features/login/presentation/screens/login_screen.dart';
+// import 'package:gymawy/features/login/presentation/screens/register_screen.dart';
 // import 'package:gymawy/features/login/presentation/screens/splash_screen.dart';
 //
 //

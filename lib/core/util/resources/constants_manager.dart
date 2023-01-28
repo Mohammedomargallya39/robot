@@ -98,6 +98,7 @@ AppBar defaultAppBar({
       icon: svgImage(path: Assets.images.svg.arrow_back,),
       onPressed: onPressed ?? ()
       {
+        Navigator.pop(context);
         // prevPage ? cubit!.nextPage(false,context) : Navigator.pop(context);
       },
     ),

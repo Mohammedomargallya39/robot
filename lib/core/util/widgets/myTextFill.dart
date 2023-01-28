@@ -1,8 +1,6 @@
+import 'package:MAHR/core/util/resources/extensions_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:robot/core/util/resources/extensions_manager.dart';
-
-import '../resources/colors_manager.dart';
 
 class myTextFill extends StatelessWidget {
   final TextEditingController controller;
@@ -73,7 +71,7 @@ class myTextFill extends StatelessWidget {
             validator: validate,
             controller: controller,
             autocorrect: true,
-            cursorColor: ColorsManager.mainColor,
+            cursorColor: const Color.fromARGB(255, 1, 196, 251),
             decoration: InputDecoration(
               suffixIcon: suffixIcon,
               prefixIcon: svgImg != null
