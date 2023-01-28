@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 
    <application
-        android:label="robot"
+        android:label="MAHR"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
        tools:ignore="ExtraText">

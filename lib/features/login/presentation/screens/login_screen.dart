@@ -1,8 +1,8 @@
+import 'package:MAHR/core/util/resources/extensions_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:robot/core/util/resources/extensions_manager.dart';
 import '../../../../core/util/cubit/cubit.dart';
 import '../../../../core/util/cubit/state.dart';
 import '../../../../core/util/resources/appString.dart';
@@ -13,6 +13,8 @@ import '../../../../core/util/widgets/hideKeyboard.dart';
 import '../../../../core/util/widgets/myButton.dart';
 import '../../../../core/util/widgets/myText.dart';
 import '../../../../core/util/widgets/myTextFill.dart';
+import '../../../home/presentation/screens/home_screen.dart';
+import '../../../register/presentation/screens/register_screen.dart';
 import '../controller/login_cubit.dart';
 import '../controller/login_states.dart';
 
@@ -96,7 +98,10 @@ class LoginScreen extends StatelessWidget {
                                 isPassword: appBloc.showPassword,
                                 svgImg: Assets.images.svg.lock,
                                 suffixIcon: IconButton(
-                                  icon: Icon(appBloc.visibilityShowPassword),
+                                  icon: Icon(
+                                      appBloc.visibilityShowPassword,
+                                    color: const Color.fromARGB(255, 1, 196, 251),
+                                  ),
                                   onPressed: (){
                                     appBloc.changePasswordVisibility();
                                   },
@@ -104,7 +109,8 @@ class LoginScreen extends StatelessWidget {
                               ),
                               verticalSpace(2.h),
                               myButton(
-                                  elevation: 0.0,
+                                  elevation: 10.rSp,
+                                  radius: 10.rSp,
                                   textOnly: false,
                                   iconWidget: svgImage(
                                     path: Assets.images.svg.login,
@@ -117,12 +123,22 @@ class LoginScreen extends StatelessWidget {
                                   onPressed: () async{
                                     if(formKey.currentState!.validate())
                                     {
+                                        if(emailController.text == 'samurai.admin' && passwordController.text == '123123')
+                                        {
+                                          navigateAndFinish(context, const HomeScreen());
+                                        } else
+                                        {
+                                          designToastDialog(
+                                              context: context,
+                                              toast: TOAST.error,
+                                              text: 'email or password is\'nt correct');
+                                        }
                                     }
                                     else
                                     {
                                       designToastDialog(
                                           context: context,
-                                          toast: TOAST.warning,
+                                          toast: TOAST.error,
                                           text: 'please fill ur data');
                                     }
 
@@ -134,12 +150,16 @@ class LoginScreen extends StatelessWidget {
                                   const myText(title: AppString.dont_have_account, style: Style.extraSmall),
                                   // space10Horizontal,
                                   TextButton(
-                                    onPressed: () {},
+                                    onPressed: ()
+                                    {
+                                      navigateTo(context, RegisterScreen());
+                                    },
                                     child: const myText(
                                       title: AppString.signUp,
                                       style: Style.extraSmall,
                                       color: Color.fromARGB(255, 1, 196, 251),
-                                      fontWeight: FontWeight.w600,),
+                                      fontWeight: FontWeight.w600,
+                                    ),
                                   ),
                                 ],
                               ),

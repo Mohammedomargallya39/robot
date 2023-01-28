@@ -1,6 +1,5 @@
+import 'package:MAHR/core/util/resources/extensions_manager.dart';
 import 'package:flutter/material.dart';
-import 'package:robot/core/util/resources/extensions_manager.dart';
-
 import '../resources/colors_manager.dart';
 import '../resources/constants_manager.dart';
 
@@ -62,7 +61,7 @@ class myButton extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     iconWidget!,
-                    horizontalSpace(5.w),
+                    horizontalSpace(2.w),
                     Text(text,
                         style: textStyle ??
                             Theme.of(context).textTheme.displaySmall!.copyWith(

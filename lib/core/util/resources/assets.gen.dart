@@ -7,8 +7,8 @@
 // ignore_for_file: type=lint
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal
 
+import 'package:MAHR/core/util/resources/translation_manager.dart';
 import 'package:flutter/widgets.dart';
-import 'package:robot/core/util/resources/translation_manager.dart';
 
 class $AssetsFontsGen {
   const $AssetsFontsGen();
@@ -192,14 +192,32 @@ class $AssetsImagesSvgGen {
   /// File path: assets/images/svg/clients.svg
   String get clients => 'assets/images/svg/clients.svg';
 
+  /// File path: assets/images/svg/gro.svg
+  String get gro => 'assets/images/svg/gro.svg';
+
+  /// File path: assets/images/svg/glass.svg
+  String get glass => 'assets/images/svg/glass.svg';
+
   /// File path: assets/images/svg/client_progress.svg
   String get clientProgress => 'assets/images/svg/client_progress.svg';
 
   /// File path: assets/images/svg/exercise.svg
   String get exercise => 'assets/images/svg/exersice.svg';
 
+  /// File path: assets/images/svg/bag.svg
+  String get bag => 'assets/images/svg/bag.svg';
+
+  /// File path: assets/images/svg/call.svg
+  String get call => 'assets/images/svg/call.svg';
+
+  /// File path: assets/images/svg/atef.svg
+  String get atef => 'assets/images/svg/atef.jpeg';
+
   /// File path: assets/images/svg/plans.svg
   String get plans => 'assets/images/svg/plans.svg';
+
+  /// File path: assets/images/svg/light.svg
+  String get light => 'assets/images/svg/light.svg';
 
   /// File path: assets/images/svg/bar.svg
   String get bar => 'assets/images/svg/bar.svg';
